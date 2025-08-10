@@ -1,0 +1,268 @@
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #0f0c29;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    animation: move 20s linear infinite;
+}
+
+
+.background li:nth-child(0) {
+    left: 12%;
+    width: 101px;
+    height: 101px;
+    bottom: -101px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 18%;
+    width: 139px;
+    height: 139px;
+    bottom: -139px;
+    animation-delay: 4s;
+}
+.background li:nth-child(2) {
+    left: 20%;
+    width: 149px;
+    height: 149px;
+    bottom: -149px;
+    animation-delay: 6s;
+}
+.background li:nth-child(3) {
+    left: 30%;
+    width: 144px;
+    height: 144px;
+    bottom: -144px;
+    animation-delay: 8s;
+}
+.background li:nth-child(4) {
+    left: 39%;
+    width: 111px;
+    height: 111px;
+    bottom: -111px;
+    animation-delay: 11s;
+}
+.background li:nth-child(5) {
+    left: 50%;
+    width: 118px;
+    height: 118px;
+    bottom: -118px;
+    animation-delay: 15s;
+}
+.background li:nth-child(6) {
+    left: 54%;
+    width: 109px;
+    height: 109px;
+    bottom: -109px;
+    animation-delay: 17s;
+}
+.background li:nth-child(7) {
+    left: 64%;
+    width: 133px;
+    height: 133px;
+    bottom: -133px;
+    animation-delay: 21s;
+}
+.background li:nth-child(8) {
+    left: 89%;
+    width: 105px;
+    height: 105px;
+    bottom: -105px;
+    animation-delay: 23s;
+}
+.background li:nth-child(9) {
+    left: 89%;
+    width: 144px;
+    height: 144px;
+    bottom: -144px;
+    animation-delay: 28s;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    background-color: rgba(42, 50, 76, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+    background-color: #6366f1;
+}
+
+.social-icon:hover {
+    animation: bounce 0.5s;
+    filter: drop-shadow(0 0 5px #fff);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes stars {
+    0% {background-position: 0 0;}
+    100% {background-position: -10000px 5000px;}
+}
+
+@keyframes twinkling {
+    0% {background-position: 0 0;}
+    100% {background-position: -10000px 5000px;}
+}
+
+.stars,
+.twinkling,
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+}
+
+.stars::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(white, transparent);
+    box-shadow: 0 0 2px white, 0 0 4px white, 0 0 8px white;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.clouds {
+    background: transparent url(https://www.script-tutorials.com/demos/360/images/clouds.png) repeat top center;
+    z-index: 1;
+    animation: twinkling 200s linear infinite;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+#to-top {
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.scroll-down {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.scroll-down a {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+#experience .mb-10 {
+    padding-left: 2rem;
+}
+
+/* Shooting star animation */
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    animation: shooting 3s linear infinite;
+}
+
+@keyframes shooting {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, 100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Navigation hover effects */
+nav a:hover {
+    color: #00bcd4;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Button hover effects */
+button:hover {
+    transform: scale(1.05);
+    background-color: #00bcd4;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
