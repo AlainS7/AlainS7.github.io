@@ -2,15 +2,13 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AlainS7.github.io/my-portfolio",
+  "homepage": "https://AlainS7.github.io",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "export": "next export",
-    "deploy": "gh-pages -d out"
+    "export": "next export"
   },
   "dependencies": {
     "aos": "^2.3.4",

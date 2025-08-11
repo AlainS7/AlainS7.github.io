@@ -1,5 +1,5 @@
 
-# How to Publish a Next.js Site to GitHub Pages
+# How to Publish a Next.js Site to GitHub Pages - Outdated (Switched to GH Actions)
 
 ## 1. Prerequisites
 
