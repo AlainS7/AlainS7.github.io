@@ -202,14 +202,25 @@ export default function App() {
               <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.3 } }} className="bg-gray-800 rounded-xl p-6 shadow-lg">
                 <h4 className="text-xl font-bold mb-2">Hot Durham Environmental Monitoring System</h4>
                 <p className="text-gray-300">Built a serverless data pipeline on GCP to collect, process, and analyze environmental data. Deployed via Docker with CI/CD automation, enabling trend analysis and anomaly detection. Integrated Cloud-Native ETL Pipeline for reliable data ingestion from multiple APIs into PostgreSQL.</p>
-                <a
-                  href="https://github.com/AlainS7/durham-environmental-monitoring"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 px-4 py-2 bg-yellow-500 text-black font-semibold rounded hover:bg-yellow-400 transition-colors"
-                >
-                  Check it out on GitHub
-                </a>
+                <div className="flex flex-col sm:flex-row gap-2 mt-4 items-center justify-center">
+                  <a
+                    href="https://github.com/AlainS7/durham-environmental-monitoring"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-yellow-500 text-black font-semibold rounded hover:bg-yellow-400 transition-colors text-sm"
+                  >
+                    Check it out on GitHub
+                  </a>
+                  <a
+                    href="https://alains7.github.io/durham-environmental-monitoring/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-3 py-1 bg-gray-700 text-yellow-400 font-medium rounded hover:bg-gray-600 transition-colors text-xs border border-yellow-400"
+                    style={{ fontSize: '0.85rem' }}
+                  >
+                    Check out the site!
+                  </a>
+                </div>
               </motion.div>
             </div>
           </motion.section>
